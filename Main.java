@@ -2,13 +2,17 @@ import java.util.ArrayList;
 
 public class Main
 {
-    String songs = Main.main(String[]);
     public static void main(String[] args)
     {
         System.out.println ("Rayan's CW1 ");
         System.out.println("Hello user :)");
-        String Songs = InputReader.getString("Would you like to listen to music yes/no ? :" );
+        String name = InputReader.getString("Enter your name > ");
+        System.out.println("Hello " + name);
+        String q1 = InputReader.getString("Would you like to listen to music  yes/no ?>");
 
+         if (q1.equalsIgnoreCase("yes") ) {
+      System.out.println("this is the list of songs");
+     
 
 
     
@@ -27,7 +31,7 @@ public class Main
         Songs lif = new Songs("LIF", "SCH", 1609166);
         Songs b3ida = new Songs("B3ida", "Flenn", 15630088);
       
-
+        
         
          ArrayList<Songs> songs = new ArrayList<Songs>();
          songs.add(celine3x);
@@ -44,8 +48,49 @@ public class Main
          songs.add(ferrari);
          songs.add(lif);
          songs.add(b3ida);
+
+/* 
+         songs.remove();
         
-
-
+*/
+int id = 1;
+         for(Songs song : songs){
+            System.out.print("ID: " + id+"\t");
+            song.print();
+            id++;
+         }
+         String q2 = InputReader.getString("would you like to add a song ? >");
+    String songsadd = InputReader.getString("Enter the name of the song : >");
+    String artistadd = InputReader.getString("Enter the name of the artist : >");
+    int playcountadd = InputReader.getInt("Enter the playcount : >"); 
+    System.out.print("SONG:" + songsadd +"\t");
+    System.out.print("ARTIST:" + artistadd +"\t");
+    System.out.println("PLAYCOUNT:" + playcountadd +"\t");
+    Songs newsong = new Songs(songsadd, artistadd, playcountadd);
+    songs.add(newsong);
+    for (Songs i : songs) {
+      i.print();
     }
+
+    int q3 =InputReader.getInt("Would you like to remove a song ? (choose the songs in order from 0 to 14)>");
+    String q4 = InputReader.getString("are you sure you want to remove song number " + q3 + "? >");
+    if (q4.equalsIgnoreCase("yes") ) {
+
+    
+
+    songs.remove(q3);
+    for (Songs i : songs) {
+      System.out.print("ID: 0 ");
+      i.print();
+    }
+   }
+    
+
+         }
+         else {
+            System.out.println("Good bye.");
+    }
+    
 }
+
+} 

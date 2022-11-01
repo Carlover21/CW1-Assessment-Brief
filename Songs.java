@@ -18,6 +18,9 @@ public class Songs {
        System.out.print("ARTIST: "+this.artist + "\t");
        System.out.println("PLAYCOUNT: "+this.playcount + "\t");
     }
+
+    public static void add(String string) {
+    }
     
 
 }
