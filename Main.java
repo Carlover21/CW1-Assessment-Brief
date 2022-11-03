@@ -39,7 +39,7 @@ public class Main
          songs.add(tdb);
          songs.add(balader);
          songs.add(attentat);
-         songs.add(bandeorganisée);
+         songs.add(bandeorganisée); 
          songs.add(gangstasparadice);
          songs.add(puffinonzootiez);
          songs.add(luciddreams);
@@ -49,10 +49,6 @@ public class Main
          songs.add(lif);
          songs.add(b3ida);
 
-/* 
-         songs.remove();
-        
-*/
 int id = 1;
          for(Songs song : songs){
             System.out.print("ID: " + id+"\t");
