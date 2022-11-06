@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main
 {
@@ -77,10 +78,11 @@ int id = 1;
     if ( q4 <= 14  ) {
     String q5 = InputReader.getString("Are you sure you want to remove song number " + q4 + "? >");
     if (q5.equalsIgnoreCase("yes") ) {
-    
     songs.remove(q4);
+    int idr = 1; 
     for (Songs i : songs) {
-      System.out.print("ID: 0 ");
+      System.out.print("ID: 0"+ idr+ "\t");
+      idr++;
       i.print();
                           }
                         }
@@ -100,11 +102,25 @@ int id = 1;
 }
 }
 
-    
-System.out.println("Thanks for using the program good bye :)");
+
+    }
+    else {
+      System.out.println("Thanks for using the program good bye :)");
+      }
+
+   try (Scanner choose = new Scanner(System.in)) {
+    System.out.println("Please enter the number of playcounts for the songs you are looking for :  ");
+    int playcount = choose.nextInt();
+   
+   System.out.println("The songs are :");
+
+   for(Songs song : songs){
+    if ( playcount <= song.getPlaycount()){
+      song.print();
     }
 
-
+   }
+  }
 }
 else {
   System.out.println("Good bye.");

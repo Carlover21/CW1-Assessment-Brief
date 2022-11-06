@@ -2,7 +2,9 @@ public class Songs {
     private String songs;
     private String artist;
     private int playcount;
+  
 
+    
     //Constructor
     public Songs(String songs, String artist, int playcount)
     {
@@ -19,8 +21,11 @@ public class Songs {
        System.out.println("PLAYCOUNT: "+this.playcount + "\t");
     }
 
-    public static void add(String string) {
+    public int getPlaycount() {
+        return this.playcount;
+        
     }
-    
+
+   
 
 }
