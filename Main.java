@@ -105,7 +105,7 @@ int id = 1;
 
     }
     else {
-      System.out.println("Thanks for using the program good bye :)");
+      System.out.println("Okey :)");
       }
 
    try (Scanner choose = new Scanner(System.in)) {
