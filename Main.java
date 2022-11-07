@@ -81,7 +81,7 @@ int id = 1;
     songs.remove(q4);
     int idr = 1; 
     for (Songs i : songs) {
-      System.out.print("ID: 0"+ idr+ "\t");
+      System.out.print("ID: "+ idr+ "\t");
       idr++;
       i.print();
                           }
@@ -96,7 +96,7 @@ int id = 1;
       }
       songs.remove(q8);
       for (Songs i : songs) {
-        System.out.print("ID: 0 ");
+        System.out.print("ID: ");
         i.print();
 }
 }
@@ -121,11 +121,12 @@ int id = 1;
 
    }
   }
+  
+
+
 }
 else {
   System.out.println("Good bye.");
 }
-
 }
-
 }
